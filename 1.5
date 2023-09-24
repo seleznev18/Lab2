@@ -1,0 +1,20 @@
+n=int(input('Введите n:'))
+a = 0
+def generate_permutations(li):
+    n = len(li)
+    if n == 0:
+        return [[]]
+    else:
+        permutations = []
+        for i in range(n):
+            rest = li[:i] + li[i+1:]
+            for j in generate_permutations(rest):
+                permutations.append([li[i]] + j)
+        return permutations
+
+li = [x for x in range(1, n+1)]
+permutations = generate_permutations(li)
+print('Все возможные перестановки:'permutations)
+for p in permutations:
+    a+=1
+print("Количество итераций алгоритма 5 = " + str(a))
