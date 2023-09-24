@@ -1,0 +1,33 @@
+num = 1 #берем число, чтобы длительность исполнения алгоритма была максимально возможной
+a = 0
+n = [x for x in range(1, 33)]
+while len(n) > 0:
+    middle = len(n) // 2
+    if n[middle] == num:
+        break
+    elif n[middle] < num:
+        n = n[middle+1:]
+    else:
+        n = n[:middle]
+    a+=1
+n = [x for x in range(1, 33)]
+while len(n) > 0:
+    middle = len(n) // 2
+    if n[middle] == num:
+        break
+    elif n[middle] < num:
+        n = n[middle+1:]
+    else:
+        n = n[:middle]
+    a+=1
+n = [x for x in range(1, 33)]
+while len(n) > 0:
+    middle = len(n) // 2
+    if n[middle] == num:
+        break
+    elif n[middle] < num:
+        n = n[middle+1:]
+    else:
+        n = n[:middle]
+        a+=1
+print("Макс. количество итераций алгоритма 3 = " + str(a))
